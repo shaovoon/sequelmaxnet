@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Employees>
+    <Employee EmployeeID="1286" SupervisorID="666">
+        <Name>Amanda Dion</Name>
+        <Salary>2200</Salary>
+        <Gender>Female</Gender>
+        <!--Hardworking employee!-->
+    </Employee>
+    <Employee EmployeeID="1287" SupervisorID="666">
+        <Name>John Smith</Name>
+        <Salary>3200</Salary>
+        <Gender>Male</Gender>
+        <!--Hardly working employee!-->
+    </Employee>
+    <Employee EmployeeID="1288" SupervisorID="666">
+        <Name>Sheldon Cohn</Name>
+        <Salary>5600</Salary>
+        <Gender>Male</Gender>
+    </Employee>
+</Employees>
