@@ -373,12 +373,12 @@ namespace SequelMaxNet
         {
             dest = "";
             ++index;
-            if (src[index] == '\"' && src[index + 1] == '\"')
+            if ( (src[index] == '\"' && src[index + 1] == '\"') || (src[index] == '\'' && src[index + 1] == '\'') )
             {
                 ++index;
                 return true;
             }
-            while (src[index] != '\"')
+            while (src[index] != '\"' && src[index] != '\'')
             {
                 dest += src[index];
                 ++index;
@@ -553,10 +553,15 @@ namespace SequelMaxNet
                                         pRawElement.Destroy();
                                         pRawElement = null;
                                     }
+									if (dict_EndElemDelegate.ContainsKey(key))
+									{
+										EndElementDelegate del = dict_EndElemDelegate[key];
+										del("");
+									}
 
                                     StackElement.Pop();
                                     StackLineNum.Pop();
-                                    break;
+                                    goto breakout;
                                 }
 
                                 if (src[i] == '>')
@@ -682,6 +687,7 @@ namespace SequelMaxNet
                     }
 
                 }
+breakout:
                 ++i;
             }
 
