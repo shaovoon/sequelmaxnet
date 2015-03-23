@@ -1,6 +1,6 @@
 New SAX parsing model for .NET
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Employees>
     <Employee EmployeeID="1286" SupervisorID="666">
@@ -25,7 +25,7 @@ New SAX parsing model for .NET
 
 To parse the XML above, we need to write our parsing code as below with delegates.
 
-```
+```csharp
 static bool ReadDoc(string file, List<Employee> list)
 {
     SequelMaxNet.Document doc = new SequelMaxNet.Document();
