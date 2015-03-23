@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace SequelMaxNet
@@ -165,7 +164,7 @@ namespace SequelMaxNet
             {
                 List<KeyValuePair<string, string>> attrList = m_pRawElement.GetAttrs();
 
-                for (int i = 0; i < attrList.Count(); ++i)
+                for (int i = 0; i < attrList.Count; ++i)
                 {
                     Attribute attr = new Attribute();
                     attr.SetParam(m_pRawElement, attrList[i].Key); // TODO: set name

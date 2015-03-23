@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace SequelMaxNet
@@ -137,7 +136,7 @@ namespace SequelMaxNet
             if (pAttrs == null)
                 return 0;
 
-            return pAttrs.Count();
+            return pAttrs.Count;
         }
 
         public XMLTYPE GetXmlType()
